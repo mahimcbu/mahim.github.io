@@ -12,34 +12,36 @@
     </head>
     <body class="body-page">
         <header> <!--Header section contain the nav bar-->
-            <nav class="nav-bar">  <!--This is the navigation section.-->
-                <img src="./Images/logo.png" alt="MC logo">
+            <nav class="nav-bar">  <!--This is the navigation section. -->
                 <ul class="navul">
-                    <li class="main-menu-list"><a  href= 'index.html'>Home</a></li>
-                    <li class="main-menu-list"><a href= 'about.html'>About me</a></li>
-                    <li class="main-menu-list"><a  href= 'hobbies.html'>Hobbies</a> </li> 
-                    <li class="main-menu-list"><a  href ='work.html'>Work</a> </li> 
-                    <li class="main-menu-list"><a  href ='education.html'>Education</a> </li> 
-                    <li class="main-menu-list"><a  href ='liverpool.html'>Liverpool FC</a> </li>        
-                    <li class="main-menu-list"><span>Feedback</span></li> 
+                    <li class="main-menu-list"><a  href= 'index.html'>Home</a></li> 
+                    <li class="main-menu-list "><a href="about.html">About me</a></li>
+                    <li class="main-menu-list "><a  href="hobbies.html">Hobbies</a> </li>  
+                    <li class="main-menu-list "><a href = "work.html">Work</a> </li>
+                    <li class="main-menu-list "><a  href ='education.html'>Education</a> </li>         
+                    <li class="main-menu-list "><a  href ='liverpool.html'>Liverpool FC</a> </li>        
+                    <li class="main-menu-list active"><a href = '#'>Feedback</a></li> 
                 </ul> 
-            </nav>
+            </nav> 
         </header>
         <main class="feedback-main"> <!--This main section is the middle part of the body-->
-                <h3 class="feedback-intro-header">Feedback Form</h3>
-                <section class = "feedback-form"> <!--Broke down the contents into sections-->
-                    <form > <!--Using the form by doing some research-->
-                        First Name: <br><input type="text" name="firstname" ><br>
-                        Last Name: <br><input type="text" name="lastname"><br>
-                        Email: <br><input type="Email" name="Email"><br>
-                        Feedback:<br>
-                        <textarea name="Feedback" rows="15" cols="50">
-                        </textarea> <br>
-                        <input class="submit-button" type="submit" value="Submit">
-                    </form> 
+                <form  onsubmit="return validateForm()" method="post">
+                <section class="form-body">
+                    <section class = "feedback-form"> <!--Broke down the contents into sections-->
+                            First Name(required): <br><input type="text" name="firstName" id="firstName" placeholder="first name..." required><br>
+                            <div id="firstNameError"></div>
+                            Last Name(required): <br><input type="text" name="lastName" id="lastName" placeholder="last name..." required><br>
+                            <div id="lastNameError"></div>
+                            Email(required): <br><input type="Email" name="Email" id="email" placeholder= "type your email here..."required><br>
+                            <div id="emailError"></div>
+                            Feedback:<br>
+                            <textarea name="Feedback" id="feedback" placeholder="write your comments here..." rows="15" cols="50">
+                            </textarea> <br>
+                    </section>
                 </section>
-                <img class="feedback-pic"src="https://images.unsplash.com/photo-1608389168343-ba8aa0cb3a63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80"
-                    alt="A picture with Thank you written on it">
+                    <input class="submit-button" type="submit" value="Submit" style="cursor:grab">
+                </form>
+               <script src="./Script/script.js"></script>
         </main>
         <footer class="foot"> <!--This is the end of the page-->
             <p class="footer-paragraph">Thank you for visiting my web site! Please don't forget to contact me for any information.</p> <br>

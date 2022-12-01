@@ -10,25 +10,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body class="body-page">
+    <body class="about-body-page">
         <header><!--Header section contain the website's topic and menu bar-->
-            <nav class="nav-bar">  <!--This is the navigation section.-->
-                <img src="./Images/logo.png" alt="MC logo">
-                <ul class="navul">
-                    <li class="main-menu-list"><a href= 'index.html'>Home</a></li>
-                    <li class="main-menu-list"><span >About me</span> </li>
-                    <li class="main-menu-list"><a  href= 'hobbies.html'>Hobbies</a> </li>  
-                    <li class="main-menu-list"><a href = 'work.html'>Work</a> </li>
-                    <li class="main-menu-list"><a  href ='education.html'>Education</a> </li>         
-                    <li class="main-menu-list"><a  href ='liverpool.html'>Liverpool FC</a> </li>        
-                    <li class="main-menu-list"><a href = 'feedback.html'>Feedback</a></li> 
-                </ul> 
-            </nav>
- 
-        </header>
+            <header><!--Header section contain the website's topic and menu bar-->
+                <nav class="nav-bar">  <!--This is the navigation section. -->
+                    <ul class="navul">
+                        <li class="main-menu-list"><a  href= 'index.html'>Home</a></li> 
+                        <li class="main-menu-list active"><a href="#">About me</a></li>
+                        <li class="main-menu-list"><a  href= 'hobbies.html'>Hobbies</a> </li>  
+                        <li class="main-menu-list"><a  href = 'work.html'>Work</a> </li>
+                        <li class="main-menu-list"><a  href ='education.html'>Education</a> </li>         
+                        <li class="main-menu-list"><a  href ='liverpool.html'>Liverpool FC</a> </li>        
+                        <li class="main-menu-list"><a href = 'feedback.html'>Feedback</a></li> 
+                    </ul> 
+                </nav>
+            </header>
         <main class="about-main"> <!--This main section is the middle part of the body--> 
-                <article class="about-mahim">
-                    <h1 class="about-intro-header">A brief introduction to me</h1>
+                <section class="about-mahim">
+                    <div class="about-img-container">
+                        <img class="about-img" src="./Images/Mahim.jpg" 
+                            alt ="A picture of Mahim">
+                    </div>
                     <p class="about-intro-paragraph">
                         I was born in Sylhet, Bangladesh. I was interested in sports from a young age and grew quite close to my only sibling. I migrated to the USA in 2012 with my family
                         after completing high school. As an immigrant family, we initially faced difficulties. I received constant support from my family as I finished my undergraduate
@@ -36,21 +38,20 @@
                         At the moment, engineering is my line of work. With my family and my gorgeous wife, I'm currently based in Philadelphia. Recently, I've become intrigued about 
                         software development, therefore I've made the decision to begin my master's program in software development at Boston University in 2022.
                     </p>
-                    <div class="about-img">
-                        <img class="mahim-about-pictures" src="./Images/Mahim4.jpg" 
-                            alt ="A picture of Mahim" height = "550" width="350">
-                            <p class="title">One of my black & white pictures.</p>
-                        <img class="mahim-about-pictures"  src="./Images/Mahim5.jpg" 
-                            alt ="Another picture of Mahim" height="550" width="460">
-                            <p class="title">A picture of me in my university.</p> 
-                    </div>
-
-                </article>       
+                </section>       
         </main>
-        <footer class="about-footer"> <!--This is the end of the page-->
+         <!--This is the end of the page-->
+        <footer class="about-footer">
             <p>Please follow me in the social media to learn more about me at</p>
-            <a class="fa fa-facebook" href = "https://www.facebook.com/"></a>
-            <a class="fa fa-linkedin" href = "https://www.linkedin.com/in/mahim-choudhury-289b7810b/"></a>
+            <div class="social-container">
+                <a  href = "https://www.facebook.com/">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a  href = "https://www.linkedin.com/in/mahim-choudhury-289b7810b/">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+
             <section class="copyright">&copy; Copyright 2022 | Mahim Choudhury</section>
         </footer>
         
