@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="./CSS/style1.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap" rel="stylesheet">        
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap" rel="stylesheet">  
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
     </head>
     <body class="body-page">
         <header> <!--Header section contain the nav bar-->
@@ -38,7 +39,23 @@
                 </div>
                 
             </section>
-            <section class="education"><!--A table formatted work history-->
+            <section class="degrees">
+                <h1>List of degrees attended by me:</h1>
+                <table class="degree-table">
+                    <thead>
+                        <tr>
+                            <th>School Name</th>
+                            <th>Program name</th>
+                            <th>Type</th>
+                            <th>Gpa</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody id="databody">  
+                    </tbody>
+                </table>
+            </section>
+            <section class="education"> 
                 <div class="projects">
                     <h1 class="projects-header">Few of my projects</h1>
                     Designing a Psoc board sound controlled stopwatch, 
@@ -46,7 +63,7 @@
                     Microsoft SQL Server Database design for inventory order management, 
                     Stroboscope Design with Microchip Microcontroller,
                     Embedded Plant Growth Chamber Design with Microchip Microcontroller,
-                    Front end web development for personal portfoli website
+                    Front end web development for personal portfolio website
                 </div>
                 <div class="courseworks">
                     <h1 class="courseworks-header">Courseworks</h1>
@@ -56,17 +73,17 @@
 	                    Hardware-Software partitioning and co-design techniques,
                         Understanding Machine Learning (Python) and Computer Vision techniques,
                         Database Design,
-                        Web development front enjoyed,
+                        Web development front-end,
                 </div>
                 <div class="skills"> 
                     <h1 class="skills-header">Programming Skills</h1>             
-                    Java, HTML, CSS, Python, Assembly Language Programming, VHDL
+                    Java, HTML, CSS, Python, Javascript, VHDL
                 </div>
             </section><hr>
             <article class="school-pictures">
-                <div class="school-logos">
-                    <img class="sbu" src="https://patch.com/img/cdn/users/21766/2012/02/raw/f67ef214a6fcfcb64a7565d2281e6b18.jpg" alt="Logo of sbu">
-                    <img class="bu" src="https://logos-download.com/wp-content/uploads/2020/06/Boston_University_Logo_text.png" alt="logo of bu">
+                <div class="school-logos" id="app">
+                    <img class="sbu" v-bind:src="sbusrc" alt="Logo of sbu">
+                    <img class="bu" v-bind:src="busrc" alt="logo of bu">
                 </div>  
             </article>
         </main>
@@ -74,5 +91,9 @@
             <p class="footer-paragraph">Thank you for visiting my web site! Please don't forget to contact me for any information.</p> <br>
             <section class="copyright">&copy; Copyright 2022 | Mahim Choudhury</section>
         </footer>
+        <script src="./Script/app.js" ></script> 
+        <script src="./Script/script.js"></script> 
+        <noscript>Your browser does not support JavaScript!</noscript>
+      
     </body>
 </html>

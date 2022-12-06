@@ -9,6 +9,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+
     </head>
     <body class="body-page">
         <header> <!--Header section contain the nav bar-->
@@ -25,17 +27,17 @@
             </nav> 
         </header>
         <main class="feedback-main"> <!--This main section is the middle part of the body-->
-                <form  onsubmit="return validateForm()" method="post">
+                <form  onsubmit ="return validateForm()">
                 <section class="form-body">
                     <section class = "feedback-form"> <!--Broke down the contents into sections-->
                             First Name(required): <br><input type="text" name="firstName" id="firstName" placeholder="first name..." required><br>
                             <div id="firstNameError"></div>
                             Last Name(required): <br><input type="text" name="lastName" id="lastName" placeholder="last name..." required><br>
                             <div id="lastNameError"></div>
-                            Email(required): <br><input type="Email" name="Email" id="email" placeholder= "type your email here..."required><br>
+                            Email(required): <br><input type="Email" name="Email" id="email" placeholder= "type your email here..." required><br>
                             <div id="emailError"></div>
                             Feedback:<br>
-                            <textarea name="Feedback" id="feedback" placeholder="write your comments here..." rows="15" cols="50">
+                            <textarea name="Feedback" id="feedback" placeholder="write your comments here..." rows="15">
                             </textarea> <br>
                     </section>
                 </section>
@@ -47,6 +49,7 @@
             <p class="footer-paragraph">Thank you for visiting my web site! Please don't forget to contact me for any information.</p> <br>
             <section class="copyright">&copy; Copyright 2022 | Mahim Choudhury</section>
         </footer>
-        
+        <noscript>Your browser does not support JavaScript!</noscript>
+
     </body>
 </html>

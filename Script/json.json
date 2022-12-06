@@ -1,0 +1,16 @@
+[
+	{
+		"School": "Stony Brook University",
+		"Program": "Electrical Engineering",
+		"Type": "Bachelors of science in engineering",
+        "Gpa": 3.43,
+		"Year": 2019
+	},
+	{
+		"School": "Boston University",
+		"Program": "Software Development",
+		"Type": "Masters of science",
+        "Gpa": 3.70,
+		"Year": 2023
+	}
+]
