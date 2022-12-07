@@ -12,86 +12,88 @@
   }
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  max-width: 1900px;
+  margin: auto;
+  min-height: 100vh;
+  background: #0e0e0e;
+  font-family:sans-serif;
+}
 
+.nav-bar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background: #1a1a1a;
+}
+
+.navul{
+  width: 1500px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+
+}
+
+.main-menu-list a{
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 25px;
+  margin: 0 15px;
+  line-height: 80px;
+  transition: .5s;
+  font-size: 15px;
+}
+
+.main-menu-list a:hover, .main-menu-list.active a{
+  opacity: 1;
+}
+
+.foot{
+  position: relative;
+  padding: 10px;
+  flex-wrap: wrap;
+  color: white;
+  background: #1a1a1a;
+  bottom: 0;
+  width: 100%;
+} 
+.foot .footer-paragraph{
+  line-height: 2rem;
+}
+.foot .copyright{
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  line-height: 40px;
+  font-size: 0.7em;
+  text-align: center;
+  bottom:0;
+  top: 70%;
+}
 /*
 ///////////
 ////////////
 //////////
 ******************************** Screens above 1250px will show the following style *********************************/
 @media screen and (min-width: 1250px) {
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body{
-    width: 100%;
-    max-width: 1900px;
-    display: block;
-    margin: auto;
-    min-height: 100vh;
-    background: #0e0e0e;
-    font-family:sans-serif;
-  }
-  
-  .nav-bar{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    background: #1a1a1a;
-  }
-  
-  .navul{
-    width: 1500px;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    display: flex;
-
-  }
-  
-  .main-menu-list a{
-    color: #fff;
-    opacity: 0.5;
-    text-decoration: none;
-    text-transform: capitalize;
-    padding: 10px 25px;
-    margin: 0 15px;
-    line-height: 80px;
-    transition: .5s;
-    font-size: 15px;
-  }
-  
-  .main-menu-list a:hover, .main-menu-list.active a{
-    opacity: 1;
-  }
-  
-  .foot{
-    position: relative;
-    padding: 10px;
-    flex-wrap: wrap;
-    color: white;
-    background: #1a1a1a;
-  } 
-  .foot .footer-paragraph{
-    line-height: 2rem;
-  }
-  .foot .copyright{
-    position: absolute;
-    width: 100%;
-    color: #fff;
-    line-height: 40px;
-    font-size: 0.7em;
-    text-align: center;
-    bottom:0;
-    top: 70%;
-  }
+ 
 
 /* ***************** Home page ******************* */
 .intro{
@@ -150,7 +152,7 @@
   position: relative;
 }
 .about-mahim{
-  width: 1500px;
+  width: 1200px;
   display: grid;
   grid-template-columns: 30% 55%;
   gap: 10px;
@@ -165,6 +167,7 @@
   font-size: 20px;
   font-family: sans-serif;
   line-height: 40px;
+  margin-left: 60px;
 }
 .about-img{
   width: 400px;
@@ -682,6 +685,7 @@ textarea {
   body{
     width: 100%;
     max-width: 1000px;
+    margin-bottom: 40px;
     display: block;
     margin: auto;
     min-height: 100vh;
@@ -729,6 +733,7 @@ textarea {
   
   .foot{
     position: relative;
+    width: 100%;
     padding: 10px;
     flex-wrap: wrap;
     color: white;
@@ -745,7 +750,7 @@ textarea {
     font-size: 0.7em;
     text-align: center;
     bottom:0;
-    top: 70%;
+    top: 35px;
   }
 
 
@@ -823,6 +828,7 @@ textarea {
     font-family: sans-serif;
     line-height: 40px;
     width: 300px;
+    
   }
   .about-img{
     width: 300px;
@@ -1283,7 +1289,11 @@ table {
 /* ***************** Feedback page ******************* */
   .feedback-main{
     margin-top: 130px;
-    width: 800px;
+    width: 100%;
+  }
+
+  form{
+    margin-bottom: 100px;
   }
 
 .form-body{
@@ -1328,7 +1338,7 @@ textarea {
 /////////
 //////////
 ****************On screens that are 850px or less, set the background color to olive *****************************/
-@media screen and (max-width: 849px) {
+@media  screen and (max-width: 850px) {
   *{
     margin: 0;
     padding: 0;
@@ -1336,8 +1346,12 @@ textarea {
   }
   body{
     width: 100%;
+    min-height: 100vh;
+    margin-bottom: 300px;
     max-width: 900px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: auto;
     min-height: 100vh;
     background: #0e0e0e;
@@ -1383,11 +1397,14 @@ textarea {
   }
   
   .foot{
-    position: relative;
+    position: sticky;
     padding: 10px;
     flex-wrap: wrap;
+    justify-items: end;
     color: white;
     background: #1a1a1a;
+    bottom: 0px;
+    margin-top: 5px;
   } 
   .foot .footer-paragraph{
     line-height: 2rem;
@@ -1491,7 +1508,7 @@ textarea {
     border-radius: 17px;
   }
   .about-footer {
-    position: relative;
+    position: sticky;
     padding-left: 15px;
     display: block;
     flex-wrap: wrap; 
@@ -1896,7 +1913,7 @@ table {
   margin:10px 0 10px 0;
   }
   .liverpool-footer {
-    position: relative;
+    position: sticky;
     display: block;
     flex-wrap: wrap; 
     color: white; 
@@ -1951,6 +1968,695 @@ table {
 .feedback-main{
   width: 400px;
   margin-top: 100px;
+}
+form{
+  margin-bottom: 10px;
+}
+.form-body{
+  border: 1px solid #ff6;
+  border-radius: 2em;
+  padding: 1em 1em;
+  margin-bottom: 10px;
+}
+
+input {
+  color: white;
+  width: 100%;
+  padding: 10px 2px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: rgba(69, 63, 124, 0.596);
+}
+textarea {
+  color: white;
+  width: 100%;
+  padding: 10px 2px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: rgba(69, 63, 124, 0.596);
+}
+.submit-button{
+  border: 1px solid wheat;
+  border-radius: 5px;
+  background-color: blue;
+  padding: 10px;
+  color: #fff;
+  font-size: large;
+  width: 100%;
+}
+
+
+}
+
+/* 
+///////////
+/////////
+//////////
+****************On screens that are 390px or less, set the background color to olive *****************************/
+@media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px)  {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: flex-start;
+    min-height: 100vh;
+    background: #0e0e0e;
+    font-family:sans-serif;
+  }
+  
+  .nav-bar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background: #1a1a1a;
+  }
+  
+  .navul{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    display: flex;
+    padding: 10px 2px;
+
+  }
+  
+  .main-menu-list a{
+    color: #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 4px;
+    margin: 0 6px;
+    line-height: 20px;
+    transition: .5s;
+    font-size: 20px;
+  }
+  
+  .main-menu-list a:hover, .main-menu-list.active a{
+    opacity: 1;
+  }
+  
+  .foot{
+    position: sticky;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-items: end;
+    color: white;
+    background: #1a1a1a;
+    bottom: 0px;
+    margin-top: 5px;
+    width: 100%;
+  } 
+  .foot .footer-paragraph{
+    line-height: 1rem;
+    font-size: .7em;
+  }
+  .foot .copyright{
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    line-height: 40px;
+    font-size: 0.7em;
+    text-align: center;
+    bottom:0;
+    top: 70%;
+  }
+
+
+  /* ***************** Home page ******************* */
+ 
+  .intro-title{
+    padding-top: 1em;
+    font-size: 80px;
+  }
+
+  .intro{
+    flex-grow: 1;
+    width: 100%;
+    height: 100vh;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .intro-title{
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 100;
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorgradient 5s linear infinite;
+    position: relative;
+    padding-top: 0px;
+    font-size: 50px;
+  }
+  
+  
+  .profile-photo{
+    position: relative;
+    right: 0;
+    opacity: .5;
+    top: 0;
+    height: 50%;
+    width: 80%;
+    padding: 0;
+  }
+  /* ***************** About page ******************* */
+  .about-main{
+    width: 100%;
+    position: relative;
+    padding-top: 100px;
+  }
+  .about-mahim{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 55%;
+    gap: 8px;
+    margin-left: 10px;
+  }
+  .about-img-container{
+    position: relative;
+    width: 100%;
+  }
+  .about-intro-paragraph{
+    margin-left: 80px;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 15px;
+    font-family: sans-serif;
+    line-height: 25px;
+    width: fit-content;
+  }
+  .about-img{
+    
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 17px;
+  }
+  .about-footer {
+    position: sticky;
+    padding-left: 15px;
+    display: block;
+    flex-wrap: wrap; 
+    color: white; 
+    background-color: rgba(43, 30, 30, 0.881);
+    line-height: 1.5em;
+    justify-content: space-between;
+  }
+  
+  .about-footer p{
+    font-family: sans-serif;
+    font-size: small;
+    
+  }
+  .about-footer .copyright{
+    position: relative;
+    width: 100%;
+    color: #fff;
+    line-height: 10px;
+    font-size: 0.2em;
+    text-align: center;
+    bottom:0;
+  }
+  .social-container{
+    display: inline-block;
+    gap: 10px;
+  }
+  
+  .social-container .fa {
+    padding: 5px 5px 5px 5px;
+    font-size: 10px;
+    width: 65px;
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .social-container .fa-facebook{
+    background: #3B5998;
+    color: white;
+    border-radius: 46px;
+  
+  }
+  .social-container .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    border-radius: 46px;
+  }
+  
+  
+  /* ***************** Hobbies page ******************* */
+  .hobbies-main{
+    width: 100%;
+    padding: 50px 10px;
+    position: relative;
+  }
+  iframe{
+    width: 300px;
+  }
+  .hobbies-intro-header
+  {
+      border-bottom: 2px solid #fff;
+      width: 580px;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+      -210deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorgradient 3s linear infinite;
+    display: inline-block;
+        font-size: 30px;
+        margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .hobbies-ul{
+    
+    background-color: rgba(255, 252, 236, 0.76);
+    list-style-type: square;
+    
+  }
+  .hobbies-list{
+    color: hsl(347, 58%, 16%);
+    font-family: 'Mulish', sans-serif;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  
+  }
+  .travel{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+  }
+  .travel-paragraph{
+    color: #fff;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 50;
+    border: rgba(0, 204, 255, 0.87);
+    border-style: dashed;
+  }
+  
+  .travel-map {
+    margin-top: 10px;
+      text-align: center;
+      background-image: url("../Images/Lake.jpg");
+      background-size: cover;
+  }
+  .travel-activities{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .travel-activities h1 {
+      background-color: red;
+      animation-name: travelling;
+      animation-duration: 4s;
+  }
+  .travel-activities p{
+    color: #fff;
+    margin-top: 10px;
+    text-align: justify;
+    font-family: 'Mulish', sans-serif;
+  
+  }
+  
+  
+  /* ***************** Work page ******************* */
+  *{
+    color: #fff;
+  }
+  .work-main{
+    width: 100%;
+    padding: 50px 10px;
+    position: relative;
+  }
+  .work-intro-header {
+    border-bottom: 2px solid rgb(50, 5, 5);
+    width: 970px;
+   text-transform: uppercase;
+   background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorgradient 2s linear infinite;
+  display: inline-block;
+      font-size: 1em;
+  }
+  .work-intro-paragraph {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: .8em;
+    font-family: 'Mulish', sans-serif;
+    
+    }
+  .work-intro-header{
+    color: #fff;
+    font-size: 120px;
+    text-transform: capitalize;
+    font-weight: 100;
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorgradient 5s linear infinite;
+    font-size: 2em;
+    position: relative;
+    width: 100%;
+    }
+    .work-page-headers{
+      background-color: red;
+      animation-name: travelling;
+      animation-duration: 4s;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  .brief-work-history{
+      width: 100%;
+      margin-bottom: 10px;
+  
+    }
+  table, th, td , tr {
+      border: 1.5px solid;
+      border-color: #f0edf3;
+      margin-bottom: 20px;
+  }
+      
+  .current-responsibilties{
+      width: 100%;
+      font-size: .8em;
+  }
+  .current-responsibilties ul{
+    margin-left: 20px;
+    margin: 10px 0 10px 0;
+  }
+  .current-responsibilties p,li{
+      text-align: justify;
+      font-family: 'Mulish', sans-serif;
+  }
+  
+  .lockheed-products-img-div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,50%));
+    text-align: center;
+    margin: 10px 0 0 10px;
+    gap: 5px;
+    font-size: .8em;
+  }
+  .lockheed-img{
+    width: 400px;
+    height: 500px;
+    margin-left: 0px;
+    text-align: center; 
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  
+  /* ***************** Education page ******************* */
+  *{
+    color: #fff;
+  }
+  .education-main{
+    width: 100%;
+    padding: 50px 10px;
+    position: relative;
+  }
+  .education-intro-header {
+  border-bottom: 2px solid rgb(50, 5, 5);
+  width: 570px;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+  -225deg,
+  #231557 0%,
+  #44107a 29%,
+  #ff1361 67%,
+  #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorgradient 2s linear infinite;
+  display: inline-block;
+    font-size: 30px;
+    width: 100%;
+  }
+  
+  
+  .school-pictures .school-logos{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px,50%));
+  }
+  
+  .sbu, .bu{
+  height: 300px;
+  width: 300px;
+  margin-left: 10px;
+  
+  
+  }
+  .education-intro-paragraph{
+  width: 100%;
+  margin: 10px 0 10px 0;
+  font-size: .8em;
+  }
+  .education-intro-paragraph p{
+  text-align: justify;
+  font-family: 'Mulish', sans-serif;
+  }
+  .education{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+  gap: 3px;
+  width: 100%;
+  margin: 10px 0 20px 0;
+  }
+  .school-pictures{
+    margin: 10px 0 10px 0;
+  }
+  .projects, .courseworks, .skills{
+  border: 1px solid black;
+  font-family: 'Mulish', sans-serif;
+  box-shadow: 10px 5px 5px grey;
+  position: relative;
+  padding-left: 10px;
+  background: linear-gradient(#e66465, #9198e5);
+  border-radius: 10px;
+  }
+  .courseworks-header, .projects-header, .skills-header {
+  text-align: center;
+  }
+  .degrees{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+    background-color: rgb(15, 15, 15);
+
+}
+
+#myButton{
+  padding: 10px 10px;
+  background-color: blue;
+  border: none;
+  border-radius: 10px;
+
+}
+
+table, td, th {
+  border: 1px solid;
+  padding: 5px 5px 5px 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+  
+  /* ***************** Liverpool page ******************* */
+  *{
+    color: #fff;
+  }
+  .liverpool-main{
+    width: 100%;
+    position: relative;
+    padding: 10px 10px;
+  }
+  .liverpool-about{
+    width: 100%;
+  }
+
+  .liverpool-about p{
+  text-align: justify;
+  font-family: 'Mulish', sans-serif;
+  margin: 10px 0 10px 0;
+  width: fit-content;
+  font-size: .8em;
+  
+  }
+  .liverpool-intro-header {
+  border-bottom: 2px solid rgb(50, 5, 5);
+  width: 570px;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+  -225deg,
+  #231557 0%,
+  #44107a 29%,
+  #ff1361 67%,
+  #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorgradient 2s linear infinite;
+  display: inline-block;
+    font-size: 3.5em;
+    width: 100%;
+  }
+  
+  .liv-gif{
+  background-color: black;
+  display: block;
+  text-align: left;
+  margin-left: 0;
+  }
+  
+  .liv-titles {
+  background-color: red;
+  animation-name: travelling;
+  animation-duration: 4s;
+  margin:10px 0 10px 0;
+  }
+  .liverpool-footer {
+    position: sticky;
+    padding-left: 15px;
+    display: block;
+    flex-wrap: wrap; 
+    color: white; 
+    background-color: rgba(43, 30, 30, 0.881);
+    line-height: 1.5em;
+    justify-content: space-between;
+
+  }
+  
+  
+  .liverpool-footer .copyright{
+    position: relative;
+    width: 100%;
+    color: #fff;
+    line-height: 40px;
+    font-size: 0.7em;
+    text-align: center;
+    bottom:0;
+  }
+  
+  
+  .liverpool-footer p{
+    font-family: sans-serif;
+    font-size: 13px;
+    
+  }
+  
+  .social-container .fa {
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .social-container .fa-facebook{
+    background: #3B5998;
+    color: white;
+    border-radius: 46px;
+  
+  }
+  .social-container .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    border-radius: 46px;
+  }
+
+/* ***************** Feedback page ******************* */
+.feedback-main{
+  width: 100%;
+  margin-top: 10px;
+}
+form{
+  margin-bottom: 10px;
 }
 .form-body{
   border: 1px solid #ff6;
