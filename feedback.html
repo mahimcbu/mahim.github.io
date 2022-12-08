@@ -3,8 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <title>Feedback for my website</title>
-        <!-- <link rel="stylesheet" href="style1.css"> -->
-        <link rel="stylesheet" href="./CSS/style1.css">
         <link rel="stylesheet" href="./CSS/style1.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,14 +24,14 @@
                 </ul> 
             </nav> 
         </header>
-        <main class="feedback-main"> <!--This main section is the middle part of the body-->
-                <form  onsubmit ="return validateForm()">
+        <main class="feedback-main" id="appform"> <!--This main section is the middle part of the body-->
+                <form  @submit.prevent ="validateForm">
                 <section class="form-body">
                     <section class = "feedback-form"> <!--Broke down the contents into sections-->
-                            First Name(required): <br><input type="text" name="firstName" id="firstName" placeholder="first name..." required><br>
-                            <div id="firstNameError"></div>
-                            Last Name(required): <br><input type="text" name="lastName" id="lastName" placeholder="last name..." required><br>
-                            <div id="lastNameError"></div>
+                            First Name(required): <br><input type="text" v-model="firstName" id="firstName" placeholder="first name..." required><br>
+                            <p v-if="!fnameValid" style="color:red ;" id="lastNameError">Please use alpha chars that are at least 2 characters long</p>
+                            Last Name(required): <br><input type="text" v-model="lastName" id="lastName" placeholder="last name..." required><br>
+                            <p v-if="!lnameValid" id="lastNameError" style="color:red ;">Please use alpha chars that are at least 2 characters long</p>
                             Email(required): <br><input type="Email" name="Email" id="email" placeholder= "type your email here..." required><br>
                             <div id="emailError"></div>
                             Feedback:<br>
@@ -41,15 +39,37 @@
                             </textarea> <br>
                     </section>
                 </section>
-                    <input class="submit-button" type="submit" value="Submit" style="cursor:grab">
+                    <input class="submit-button" type="submit" value="submit">
                 </form>
-               <script src="./Script/script.js"></script>
+
+
         </main>
         <footer class="foot"> <!--This is the end of the page-->
             <p class="footer-paragraph">Thank you for visiting my web site! Please don't forget to contact me for any information.</p> <br>
             <section class="copyright">&copy; Copyright 2022 | Mahim Choudhury</section>
         </footer>
         <noscript>Your browser does not support JavaScript!</noscript>
+        <!-- <script src="./Script/script.js"></script> -->
+        <script src="./Script/app.js"></script>
 
     </body>
 </html>
+
+
+
+<!-- <form  onsubmit ="return validateForm()">
+    <section class="form-body">
+        <section class = "feedback-form"> 
+                First Name(required): <br><input type="text" name="firstName" id="firstName" placeholder="first name..." required><br>
+                <div id="firstNameError"></div>
+                Last Name(required): <br><input type="text" name="lastName" id="lastName" placeholder="last name..." required><br>
+                <div id="lastNameError"></div>
+                Email(required): <br><input type="Email" name="Email" id="email" placeholder= "type your email here..." required><br>
+                <div id="emailError"></div>
+                Feedback:<br>
+                <textarea name="Feedback" id="feedback" placeholder="write your comments here..." rows="15">
+                </textarea> <br>
+        </section>
+    </section>
+        <input class="submit-button" type="submit" value="Submit" style="cursor:grab">
+    </form> -->
