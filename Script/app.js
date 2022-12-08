@@ -8,14 +8,6 @@ const one = new Vue({
     }
 })
 
-export default one = new Vue({
-    el: '#app',
-    data () {
-        return{
-            
-        }
-    }
-})
 console.log("Vue loaded")
 const two = new Vue({
     el: '#appform',
